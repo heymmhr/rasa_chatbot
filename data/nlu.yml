@@ -1,0 +1,69 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: check_balance
+  examples: |
+    - what is my account balance?
+    - can you tell me how much money I have?
+    - check my balance?
+
+- intent: transaction_history
+  examples: |
+    - show me my transaction history
+    - i want to see my past transactions
+    - any recent transcations?
+
+- intent: provide_details
+  examples: |
+    - My name is [Heman](name) and account number is [1234567890](account_number)
+    - The account number is [ABCD1234](account_number) and my name is [Heman](name)
+    - Account number: [9876543210](account_number) and Name: [Rahul](name)
+    - Here's my name [Rahul](name) and account number: [XYZ7890](account_number)
+
+- intent: transaction_details
+  examples: |
+    - My name is [Heman](name) and transaction id is [1234567890](account_number)
+    - the transaction id is [98475673](account_number) and name is [Heman](name)
+    - Here's my transaction id: [0987654321](account_number) and name [Rahul](name)
+    
+- intent: deny
+  examples: |
+    - No
+    - I don't have an account number
+    - I won't provide my details

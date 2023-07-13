@@ -1,0 +1,37 @@
+# version: "3.1"
+
+# rules:
+# - rule: Respond to greeting
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+
+# - rule: Respond to goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - rule: Check balance - Provide details
+#   steps:
+#   - intent: check_balance
+#   - action: utter_ask_account_number
+#   - intent: provide_details
+#   - action: utter_ask_account_number
+#   - action: action_show_balance
+
+# - rule: Transaction history - Provide details
+#   steps:
+#   - intent: transaction_history
+#   - action: utter_ask_account_number
+#   - intent: provide_details
+#   - action: utter_ask_account_number
+#   - action: action_show_transaction_history
+
+
+# - rule: Deny providing details
+#   steps:
+#   - intent: check_balance
+#   - action: utter_ask_account_number
+#   - intent: deny
+#   - action: utter_deny_account_number
+

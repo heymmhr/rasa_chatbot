@@ -1,0 +1,60 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - check_balance
+  - transaction_history
+  - provide_details
+  - deny
+  - transaction_details
+
+entities:
+  - account_number
+  - name
+  - phone_number
+
+slots:
+  account_number:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: account_number
+  name:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: name
+
+responses:
+
+  utter_greet:
+  - text: "Hello! How can I assist you today?"
+
+  utter_goodbye:
+  - text: "Goodbye! Have a nice day."
+
+  utter_ask_account_number:
+  - text: "Please provide your name and account number."
+
+  utter_ask_transaction_id:
+  - text: "Please provide your name and transaction id."
+
+  utter_show_balance:
+  - text: "Dear {name}, your account {account_number} has a balance of Rs. 1000."
+
+  utter_show_transaction_history:
+  - text: "Here are your recent transactions for account {account_number}: [Transaction 1], [Transaction 2], [Transaction 3]."
+
+  utter_deny_account_number:
+  - text: "I'm sorry, but I need your account number to proceed."
+
+actions:
+  - action_show_balance
+  - action_show_transaction_history
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
